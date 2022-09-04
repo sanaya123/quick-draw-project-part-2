@@ -47,8 +47,14 @@ function check_sketch(){
         timer_counter++
         document.getElementById('timer').innerHTML = "Timer : "+ timer_counter
     }
-    else(timer_counter==400)
+    else if (timer_counter<400)
     {
+        timer_counter = 0
         timer_check = 'completed'
+    }
+    if(timer_check=='completed'){
+        timer_check = 0
+        answer_holder = ""
+        updateCanvas()
     }
 }
